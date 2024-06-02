@@ -1,0 +1,15 @@
+{
+  "name": "fs-utils-rs-darwin-universal",
+  "version": "0.0.0",
+  "os": [
+    "darwin"
+  ],
+  "main": "fs-utils-rs.darwin-universal.node",
+  "files": [
+    "fs-utils-rs.darwin-universal.node"
+  ],
+  "license": "MIT",
+  "engines": {
+    "node": ">= 10"
+  }
+}
