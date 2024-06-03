@@ -2,10 +2,7 @@
   "name": "@ivanmatthew/fs-utils-rs",
   "version": "0.1.1",
   "description": "A rustified utility library for managing filesystem-heavy operations",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/Ivanmatthew/fs-utils-rs.git"
-  },
+  "repository": "git@github.com/Ivanmatthew/fs-utils-rs.git",
   "author": "IvanMatthew",
   "keywords": [
     "filesystem",
@@ -16,6 +13,10 @@
   ],
   "main": "index.js",
   "types": "index.d.ts",
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/",
+    "access": "public"
+  },
   "napi": {
     "name": "fs-utils-rs",
     "triples": {

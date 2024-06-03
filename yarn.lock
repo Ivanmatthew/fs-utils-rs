@@ -5,12 +5,53 @@ __metadata:
   version: 8
   cacheKey: 10c0
 
+"@ivanmatthew/fs-utils-rs-darwin-universal@npm:0.1.1":
+  version: 0.1.1
+  resolution: "@ivanmatthew/fs-utils-rs-darwin-universal@npm:0.1.1"
+  conditions: os=darwin
+  languageName: node
+  linkType: hard
+
+"@ivanmatthew/fs-utils-rs-darwin-x64@npm:0.1.1":
+  version: 0.1.1
+  resolution: "@ivanmatthew/fs-utils-rs-darwin-x64@npm:0.1.1"
+  conditions: os=darwin & cpu=x64
+  languageName: node
+  linkType: hard
+
+"@ivanmatthew/fs-utils-rs-linux-x64-gnu@npm:0.1.1":
+  version: 0.1.1
+  resolution: "@ivanmatthew/fs-utils-rs-linux-x64-gnu@npm:0.1.1"
+  conditions: os=linux & cpu=x64 & libc=glibc
+  languageName: node
+  linkType: hard
+
+"@ivanmatthew/fs-utils-rs-win32-x64-msvc@npm:0.1.1":
+  version: 0.1.1
+  resolution: "@ivanmatthew/fs-utils-rs-win32-x64-msvc@npm:0.1.1"
+  conditions: os=win32 & cpu=x64
+  languageName: node
+  linkType: hard
+
 "@ivanmatthew/fs-utils-rs@workspace:.":
   version: 0.0.0-use.local
   resolution: "@ivanmatthew/fs-utils-rs@workspace:."
   dependencies:
+    "@ivanmatthew/fs-utils-rs-darwin-universal": "npm:0.1.1"
+    "@ivanmatthew/fs-utils-rs-darwin-x64": "npm:0.1.1"
+    "@ivanmatthew/fs-utils-rs-linux-x64-gnu": "npm:0.1.1"
+    "@ivanmatthew/fs-utils-rs-win32-x64-msvc": "npm:0.1.1"
     "@napi-rs/cli": "npm:^2.18.3"
     ava: "npm:^6.0.1"
+  dependenciesMeta:
+    "@ivanmatthew/fs-utils-rs-darwin-universal":
+      optional: true
+    "@ivanmatthew/fs-utils-rs-darwin-x64":
+      optional: true
+    "@ivanmatthew/fs-utils-rs-linux-x64-gnu":
+      optional: true
+    "@ivanmatthew/fs-utils-rs-win32-x64-msvc":
+      optional: true
   languageName: unknown
   linkType: soft
 
