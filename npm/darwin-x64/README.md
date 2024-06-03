@@ -1,3 +1,3 @@
-# `fs-utils-rs-darwin-x64`
+# `@ivanmatthew/fs-utils-rs-darwin-x64`
 
-This is the **x86_64-apple-darwin** binary for `fs-utils-rs`
+This is the **x86_64-apple-darwin** binary for `@ivanmatthew/fs-utils-rs`

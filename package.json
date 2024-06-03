@@ -1,6 +1,6 @@
 {
-  "name": "fs-utils-rs",
-  "version": "0.0.1",
+  "name": "@ivanmatthew/fs-utils-rs",
+  "version": "0.1.1",
   "description": "A rustified utility library for managing filesystem-heavy operations",
   "repository": {
     "type": "git",

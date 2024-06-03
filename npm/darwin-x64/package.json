@@ -1,6 +1,6 @@
 {
-  "name": "fs-utils-rs-darwin-x64",
-  "version": "0.0.0",
+  "name": "@ivanmatthew/fs-utils-rs-darwin-x64",
+  "version": "0.1.1",
   "os": [
     "darwin"
   ],
@@ -11,8 +11,21 @@
   "files": [
     "fs-utils-rs.darwin-x64.node"
   ],
+  "description": "A rustified utility library for managing filesystem-heavy operations",
+  "keywords": [
+    "filesystem",
+    "utility",
+    "rust",
+    "node",
+    "napi"
+  ],
+  "author": "IvanMatthew",
   "license": "MIT",
   "engines": {
     "node": ">= 10"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Ivanmatthew/fs-utils-rs.git"
   }
 }
