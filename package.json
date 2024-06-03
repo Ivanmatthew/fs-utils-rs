@@ -44,5 +44,11 @@
     "universal": "napi universal",
     "version": "napi version"
   },
-  "packageManager": "yarn@4.2.2"
+  "packageManager": "yarn@4.2.2",
+  "optionalDependencies": {
+    "@ivanmatthew/fs-utils-rs-win32-x64-msvc": "0.1.1",
+    "@ivanmatthew/fs-utils-rs-darwin-x64": "0.1.1",
+    "@ivanmatthew/fs-utils-rs-linux-x64-gnu": "0.1.1",
+    "@ivanmatthew/fs-utils-rs-darwin-universal": "0.1.1"
+  }
 }
