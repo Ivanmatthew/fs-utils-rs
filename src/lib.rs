@@ -10,8 +10,21 @@ use std::path::PathBuf;
 
 
 #[napi]
+#[allow(dead_code)]
 fn delete_folder_recursive(item_path: String) -> Result<()> {
-    let absolute_path = std::fs::canonicalize(&item_path)?;
+    let absolute_path = match std::fs::canonicalize(&item_path) {
+        Ok(path) => path,
+        Err(_) => {
+            println!("Warning: The path does not exist, nothing has been removed.");
+            return Ok(());
+        }
+    };
+    if !absolute_path.is_dir() {
+        return Err(Error::new(
+            Status::InvalidArg,
+            "The path is not a directory",
+        ));
+    }
     fs::remove_dir_all(absolute_path)?;
 
     Ok(())
@@ -40,6 +53,7 @@ fn _copy_folder_recursive(source_path: &PathBuf, target_path: &PathBuf) -> Resul
     Ok(())
 }
 #[napi]
+#[allow(dead_code)]
 fn copy_folder_recursive(source_path: String, target_path: String) -> Result<()> {
     let source = match std::fs::canonicalize(&source_path) {
         Ok(path) => path,

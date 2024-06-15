@@ -1,7 +1,7 @@
 import test from 'ava'
-import fs from 'node:fs'
+import * as fs from 'node:fs'
 
-import { copyFolderRecursive, deleteFolderRecursive } from '../index.js'
+import { copyFolderRecursive, deleteFolderRecursive } from './index.js'
 
 test.beforeEach(() => {
   fs.mkdirSync('./test', { recursive: true })
@@ -24,4 +24,16 @@ test('Deletes succesfully, recursively.', (t) => {
 
   deleteFolderRecursive('./test2')
   t.false(fs.existsSync('./test2'))
+})
+test('Deleting warns on non-existent path.', (t) => {
+  t.notThrows(() => deleteFolderRecursive('./test3'))
+})
+
+test.afterEach(() => {
+  if (fs.existsSync('./test')) {
+    fs.rmdir('./test', { recursive: true })
+  }
+  if (fs.existsSync('./test2')) {
+    fs.rmdir('./test2', { recursive: true })
+  }
 })
